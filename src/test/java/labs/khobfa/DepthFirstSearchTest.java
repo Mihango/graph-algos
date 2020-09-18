@@ -22,7 +22,7 @@ public class DepthFirstSearchTest {
         assertThat(result, contains(3, 1, 5, 6, 4, 2, 0));
     }
 
-    private Graph createGraph() throws Exception {
+    static Graph createGraph() throws Exception {
         Graph graph = new Graph(7);
         graph.addAdjacent(0, 1);
         graph.addAdjacent(0, 2);

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="labs.khobfa.DepthFirstSearchTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-09-17T15:57:00" hostname="admin" time="0.008">
-  <properties/>
-  <testcase name="getDfs_showCorrectOrder" classname="labs.khobfa.DepthFirstSearchTest" time="0.008"/>
-  <system-out><![CDATA[[3, 1, 5, 6, 4, 2, 0]
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

@@ -18,16 +18,16 @@ public class GraphTest {
     }
 
     @Test
-    public void getAdjacentOfNode_returnExists() throws Exception {
+    public void getAdjacentOfNode_returnExists() {
         // GIVEN
         Graph graph = new Graph(6);
 
         // WHEN
         graph.addAdjacent(0, 3);
-        graph.addAdjacent(0, 4);
+        graph.addAdjacent(0, 9);
         Iterable<Integer> iter = graph.getAdjacent(0);
 
         // THEN
-        assertThat(iter, contains(3, 4));
+        assertThat(iter, contains(3, 9));
     }
 }
