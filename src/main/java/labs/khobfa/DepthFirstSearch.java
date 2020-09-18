@@ -1,27 +1,28 @@
 package labs.khobfa;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 public class DepthFirstSearch {
 
-    public Iterable<Integer> dfs(Graph graph, int source) {
-        Stack<Integer> stack = new Stack<>();
-        boolean[] visited = new boolean[graph.vertices];
+    public List<Integer> dfs(Graph graph, int source) {
+        List<Integer> stack = new ArrayList<>();
+        boolean[] visited = new boolean[graph.getVertices()];
         dfs(graph, source, visited, stack);
         return stack;
     }
 
-    private void dfs(Graph graph, int source, boolean[] visited, Stack<Integer> stack) {
+    private void dfs(Graph graph, int source, boolean[] visited, List<Integer> stack) {
         if (visited[source]) return;
 
         visited[source] = true;
-        stack.add(source);
 
         for (int node : graph.getAdjacent(source)) {
             if (!visited[node]) {
-                visited[node] = true;
                 dfs(graph, node, visited, stack);
             }
         }
+        stack.add(source);
     }
 }

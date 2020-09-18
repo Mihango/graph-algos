@@ -6,15 +6,27 @@ import java.util.List;
 
 public class Graph {
 
-    int vertices = 0;
+    private final int vertices;
     List<LinkedList<Integer>> data;
 
     public Graph(int size) {
         this.vertices = size;
         data = new ArrayList<>(vertices);
+        for (int i = 0; i < vertices; i++) {
+            data.add(i, new LinkedList<>());
+        }
     }
 
     public Iterable<Integer> getAdjacent(int x) {
         return data.get(x);
+    }
+
+    public void addAdjacent(int x, int y) throws Exception {
+        if (x > vertices) throw new IndexOutOfBoundsException();
+        data.get(x).add(y);
+    }
+
+    public int getVertices() {
+        return vertices;
     }
 }
