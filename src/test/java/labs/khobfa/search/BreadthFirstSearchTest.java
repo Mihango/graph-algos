@@ -1,5 +1,6 @@
-package labs.khobfa;
+package labs.khobfa.search;
 
+import labs.khobfa.Graph;
 import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;

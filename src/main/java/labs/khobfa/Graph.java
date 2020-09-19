@@ -24,6 +24,7 @@ public class Graph {
     public void addAdjacent(int x, int y) {
         if (x > vertices || y > vertices) throw new IndexOutOfBoundsException();
         data.get(x).add(y);
+        data.get(y).add(x);
     }
 
     public int getVertices() {

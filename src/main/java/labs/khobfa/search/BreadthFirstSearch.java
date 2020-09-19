@@ -1,4 +1,6 @@
-package labs.khobfa;
+package labs.khobfa.search;
+
+import labs.khobfa.Graph;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

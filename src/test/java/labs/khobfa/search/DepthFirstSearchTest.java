@@ -1,5 +1,6 @@
-package labs.khobfa;
+package labs.khobfa.search;
 
+import labs.khobfa.Graph;
 import org.junit.Test;
 
 import java.util.List;
@@ -15,10 +16,9 @@ public class DepthFirstSearchTest {
         DepthFirstSearch depthFirstSearch = new DepthFirstSearch();
 
         // WHEN
-        List<Integer> result = depthFirstSearch.dfs(createGraph(), 0);
+        List<Integer> result = depthFirstSearch.dfs(createGraph(), 0, false);
 
         // THEN
-        System.out.println(result.toString());
         assertThat(result, contains(3, 1, 5, 6, 4, 2, 0));
     }
 
