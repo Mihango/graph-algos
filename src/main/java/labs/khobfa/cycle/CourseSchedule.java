@@ -45,10 +45,10 @@ public class CourseSchedule {
         return ret;
     }
 
-    public static void main(String[] args) {
-        CourseSchedule can = new CourseSchedule();
-        System.out.println(can.canFinish(2, new int[][]{
-                {1, 0}
-        }));
-    }
+//    public static void main(String[] args) {
+//        CourseSchedule can = new CourseSchedule();
+//        System.out.println(can.canFinish(2, new int[][]{
+//                {1, 0}
+//        }));
+//    }
 }

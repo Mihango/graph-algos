@@ -1,15 +1,15 @@
-package labs.khobfa;
+package labs.khobfa.structure;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Graph {
+public class UndirectedGraph implements Graph {
 
-    private final int vertices;
+    public final int vertices;
     List<LinkedList<Integer>> data;
 
-    public Graph(int size) {
+    public UndirectedGraph(int size) {
         this.vertices = size;
         data = new ArrayList<>(vertices);
         for (int i = 0; i < vertices; i++) {
@@ -17,11 +17,13 @@ public class Graph {
         }
     }
 
-    public Iterable<Integer> getAdjacent(int x) {
+    @Override
+    public Iterable<Integer> adjacent(int x) {
         return data.get(x);
     }
 
-    public void addAdjacent(int x, int y) {
+    @Override
+    public void addEdge(int x, int y) {
         if (x > vertices || y > vertices) throw new IndexOutOfBoundsException();
         data.get(x).add(y);
         data.get(y).add(x);

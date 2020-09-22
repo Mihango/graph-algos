@@ -1,6 +1,6 @@
 package labs.khobfa.search;
 
-import labs.khobfa.Graph;
+import labs.khobfa.structure.UndirectedGraph;
 import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -11,7 +11,7 @@ public class BreadthFirstSearchTest {
     @Test
     public void getLevelTraversal_returnCollectOrder() throws Exception {
         // GIVEN
-        Graph graph = DepthFirstSearchTest.createGraph();
+        UndirectedGraph graph = DepthFirstSearchTest.createGraph();
         BreadthFirstSearch breadthFirstSearch = new BreadthFirstSearch();
 
         // WHEN

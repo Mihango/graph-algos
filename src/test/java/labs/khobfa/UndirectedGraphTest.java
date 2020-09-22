@@ -1,16 +1,17 @@
 package labs.khobfa;
 
+import labs.khobfa.structure.UndirectedGraph;
 import org.junit.Test;
 
 import static org.hamcrest.Matchers.contains;
 import static org.junit.Assert.*;
 
-public class GraphTest {
+public class UndirectedGraphTest {
 
     @Test
     public void addItemsToGraph_returnSize() {
         // GIVEN
-        Graph graph = new Graph(5);
+        UndirectedGraph graph = new UndirectedGraph(5);
         // WHEN adjacent nodes are empty
 
         // THEN size should be equal to created list
@@ -20,12 +21,12 @@ public class GraphTest {
     @Test
     public void getAdjacentOfNode_returnExists() {
         // GIVEN
-        Graph graph = new Graph(6);
+        UndirectedGraph graph = new UndirectedGraph(6);
 
         // WHEN
-        graph.addAdjacent(0, 3);
-        graph.addAdjacent(0, 9);
-        Iterable<Integer> iter = graph.getAdjacent(0);
+        graph.addEdge(0, 3);
+        graph.addEdge(0, 9);
+        Iterable<Integer> iter = graph.adjacent(0);
 
         // THEN
         assertThat(iter, contains(3, 9));

@@ -1,13 +1,13 @@
 package labs.khobfa.connected;
 
-import labs.khobfa.Graph;
+import labs.khobfa.structure.UndirectedGraph;
 
 public class ConnectedComponents {
     private final int[] ids;
     private final boolean[] visited;
     private int count = 0;
 
-    public ConnectedComponents(Graph graph) {
+    public ConnectedComponents(UndirectedGraph graph) {
         ids = new int[graph.getVertices()];
         visited = new boolean[graph.getVertices()];
 
@@ -19,13 +19,13 @@ public class ConnectedComponents {
         }
     }
 
-    private void dfs(Graph graph, int source) {
+    private void dfs(UndirectedGraph graph, int source) {
         if (visited[source]) return;
 
         visited[source] = true;
         ids[source] = count;
 
-        for (int node : graph.getAdjacent(source)) {
+        for (int node : graph.adjacent(source)) {
             if (!visited[node])
                 dfs(graph, node);
         }

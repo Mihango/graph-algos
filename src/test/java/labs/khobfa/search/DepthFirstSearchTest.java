@@ -1,6 +1,6 @@
 package labs.khobfa.search;
 
-import labs.khobfa.Graph;
+import labs.khobfa.structure.UndirectedGraph;
 import org.junit.Test;
 
 import java.util.List;
@@ -22,14 +22,14 @@ public class DepthFirstSearchTest {
         assertThat(result, contains(3, 1, 5, 6, 4, 2, 0));
     }
 
-    static Graph createGraph() throws Exception {
-        Graph graph = new Graph(7);
-        graph.addAdjacent(0, 1);
-        graph.addAdjacent(0, 2);
-        graph.addAdjacent(1, 3);
-        graph.addAdjacent(2, 4);
-        graph.addAdjacent(4, 5);
-        graph.addAdjacent(4, 6);
+    static UndirectedGraph createGraph() throws Exception {
+        UndirectedGraph graph = new UndirectedGraph(7);
+        graph.addEdge(0, 1);
+        graph.addEdge(0, 2);
+        graph.addEdge(1, 3);
+        graph.addEdge(2, 4);
+        graph.addEdge(4, 5);
+        graph.addEdge(4, 6);
 
         return graph;
     }
