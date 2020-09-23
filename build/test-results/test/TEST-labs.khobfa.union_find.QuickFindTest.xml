@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="labs.khobfa.union_find.QuickFindTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-09-23T11:02:27" hostname="admin" time="0.035">
+<testsuite name="labs.khobfa.union_find.QuickFindTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-09-23T12:10:44" hostname="admin" time="0.033">
   <properties/>
-  <testcase name="givenUnionFind_ensureConnectivity" classname="labs.khobfa.union_find.QuickFindTest" time="0.035"/>
+  <testcase name="givenUnionFind_ensureConnectivity" classname="labs.khobfa.union_find.QuickFindTest" time="0.033"/>
   <system-out><![CDATA[0 id >>>> 6
 7 id >>>> 7
 ]]></system-out>

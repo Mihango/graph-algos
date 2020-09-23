@@ -15,7 +15,11 @@ public class WeightedQuickUnion implements UnionFind {
     }
 
     private int root(int i) {
-        while (i != ids[i]) i = ids[i];
+        while (i != ids[i]) {
+            // path compression
+            ids[i] = ids[ids[i]];
+            i = ids[i];
+        }
         return i;
     }
 
