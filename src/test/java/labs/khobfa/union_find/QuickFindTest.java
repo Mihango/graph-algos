@@ -9,7 +9,7 @@ public class QuickFindTest {
 
     @Test
     public void givenUnionFind_ensureConnectivity() {
-        UnionFind uf = new QuickFind(10);
+        UnionFind uf = new WeightedQuickUnion(10);
 
         uf.union(5, 0);
         uf.union(6, 5);
