@@ -33,7 +33,7 @@ public class KosarajuSharirSCC {
         }
     }
 
-    private boolean isConnected(int p, int q) {
+    public boolean isConnected(int p, int q) {
         return ids[p] == ids[q];
     }
 

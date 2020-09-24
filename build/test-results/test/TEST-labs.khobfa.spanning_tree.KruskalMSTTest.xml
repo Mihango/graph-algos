@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="labs.khobfa.spanning_tree.KruskalMSTTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-09-24T08:11:49" hostname="admin" time="0.008">
+  <properties/>
+  <testcase name="givenMST_return50MinWEight" classname="labs.khobfa.spanning_tree.KruskalMSTTest" time="0.008"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

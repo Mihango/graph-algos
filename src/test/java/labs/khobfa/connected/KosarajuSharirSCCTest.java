@@ -15,6 +15,9 @@ public class KosarajuSharirSCCTest {
         int count = scc.components();
 
         assertThat(count, is(equalTo(5)));
+        assertThat(scc.isConnected(0, 1), is(equalTo(false)));
+        assertThat(scc.isConnected(7, 9), is(equalTo(false)));
+        assertThat(scc.isConnected(10, 11), is(equalTo(true)));
     }
 
     private DiGraph createGraph() {

@@ -10,7 +10,7 @@ public class WeightedGraph {
     public final int vertices;
     private int edges;
 
-    static class Edge implements Comparable<Edge> {
+    static public class Edge implements Comparable<Edge> {
         private final int src;
         private final int dest;
         private final double weight;
@@ -49,7 +49,7 @@ public class WeightedGraph {
     }
 
     @SuppressWarnings("unchecked")
-    WeightedGraph(int size) {
+    public WeightedGraph(int size) {
         if (size < 0) throw new IllegalArgumentException("Number of vertices must be non-negative");
 
         this.vertices = size;
