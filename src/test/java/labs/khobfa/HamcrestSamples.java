@@ -2,6 +2,7 @@ package labs.khobfa;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -12,6 +13,9 @@ public class HamcrestSamples {
     @Test
     public void arraySampleAssertions() {
         Integer[] arr = {4, 2, 5, 7};
+
+//        List<List<Integer>> ar = new ArrayList<>();
+//        ar.add(0).add(3);
 
         assertThat(arr, arrayWithSize(4)); // assert not working for int[]
         assertThat(arr, arrayContaining(4, 2, 5, 7));

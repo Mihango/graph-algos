@@ -19,15 +19,15 @@ public class KruskalMSTTest {
         // THEN
         assertThat(weight, is(equalTo(50)));
 
-//        assertThat(kruskalMST.edges(), hasItems(
-//                hasProperty("weight", is(equalTo(4.0))),
-//                hasProperty("weight", is(equalTo(5.0))),
-//                hasProperty("weight", is(equalTo(6.0))),
-//                hasProperty("weight", is(equalTo(7.0))),
-//                hasProperty("weight", is(equalTo(8.0))),
-//                hasProperty("weight", is(equalTo(9.0))),
-//                hasProperty("weight", is(equalTo(11.0)))
-//        ));
+        assertThat(kruskalMST.edges(), hasItems(
+                hasProperty("weight", is(equalTo(4.0))),
+                hasProperty("weight", is(equalTo(5.0))),
+                hasProperty("weight", is(equalTo(6.0))),
+                hasProperty("weight", is(equalTo(7.0))),
+                hasProperty("weight", is(equalTo(8.0))),
+                hasProperty("weight", is(equalTo(9.0))),
+                hasProperty("weight", is(equalTo(11.0)))
+        ));
     }
 
     private WeightedGraph createGraph() {
