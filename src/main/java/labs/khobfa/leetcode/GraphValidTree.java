@@ -1,9 +1,6 @@
 package labs.khobfa.leetcode;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Given n nodes labeled from 0 to n-1 and a list of undirected edges (each edge is a pair of nodes),
@@ -13,9 +10,13 @@ public class GraphValidTree {
     int[] ids;
 
     public boolean validTree(int n, int[][] edges) {
-        ids = new int[n + 1];
+        // Condition 1: The graph must contain n - 1 edges.
+        if (edges.length != n - 1) return false;
+
+        ids = new int[n];
 
         for (int i = 0; i < n; i++) ids[i] = i;
+
         int components = n;
         for (int[] edge : edges) {
             if (connected(edge[0], edge[1])) return false;
@@ -27,7 +28,9 @@ public class GraphValidTree {
     }
 
     private int find(int i) {
-        while (i != ids[i]) i = ids[i];
+        while (i != ids[i]) {
+            i = ids[i];
+        }
         return i;
     }
 

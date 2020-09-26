@@ -53,4 +53,19 @@ public class GraphValidTreeTest {
         boolean isValid = tree.validTree(5, graph);
         assertThat(isValid, is(false));
     }
+
+    @Test
+    public void givenGraph_withLessEdges_thanNodesMinusOne_returnFalse() {
+        // GIVEN
+        int[][] graph = new int[][]{
+                {0, 1},
+                {1, 2},
+                {0, 3},
+        };
+        GraphValidTree tree = new GraphValidTree();
+
+        // WHEN
+        boolean isValid = tree.validTree(5, graph);
+        assertThat(isValid, is(false));
+    }
 }
