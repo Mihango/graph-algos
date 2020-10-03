@@ -2,25 +2,26 @@ package labs.khobfa.search;
 
 import labs.khobfa.structure.UndirectedGraph;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 public class DepthFirstSearch {
 
-    public List<Integer> dfs(UndirectedGraph graph, int source, boolean preOrder) {
-        List<Integer> stack = new ArrayList<>();
+    public List<Integer> dfs(UndirectedGraph graph, boolean preOrder) {
+        Stack<Integer> stack = new Stack<>();
         boolean[] visited = new boolean[graph.getVertices()];
-        dfs(graph, source, visited, stack, preOrder);
+        for(int i = 0; i < graph.vertices; i++)
+            if(!visited[i]) dfs(graph, i, visited, stack, preOrder);
         return stack;
     }
 
-    private void dfs(UndirectedGraph graph, int source, boolean[] visited, List<Integer> stack, boolean preOrder) {
-        if (visited[source]) return;
+    private void dfs(UndirectedGraph graph, int source, boolean[] visited,
+                     Stack<Integer> stack, boolean preOrder) {
 
         visited[source] = true;
 
         if (preOrder) {
-            stack.add(source);
+            stack.push(source);
         }
 
         for (int node : graph.adjacent(source)) {
@@ -30,7 +31,7 @@ public class DepthFirstSearch {
         }
 
         if (!preOrder) {
-            stack.add(source);
+            stack.push(source);
         }
     }
 }

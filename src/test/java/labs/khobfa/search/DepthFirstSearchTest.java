@@ -16,7 +16,7 @@ public class DepthFirstSearchTest {
         DepthFirstSearch depthFirstSearch = new DepthFirstSearch();
 
         // WHEN
-        List<Integer> result = depthFirstSearch.dfs(createGraph(), 0, false);
+        List<Integer> result = depthFirstSearch.dfs(createGraph(), false);
 
         // THEN
         assertThat(result, contains(3, 1, 5, 6, 4, 2, 0));
